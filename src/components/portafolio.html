@@ -100,6 +100,7 @@
         <!-- Proyectos -->
         <section>
             <h2>Proyectos</h2>
+            <!-- Project 1 -->
             <div class="projects">
                 <div class="project-card">
                     <img src="/PortafolioWM/src/images/colglasscl.png" alt="colglassllc">
@@ -109,6 +110,7 @@
                         <a href="https://dev.colglassllc.com/" target="_blank">Ver Proyecto</a>
                     </div>
                 </div>
+                <!-- Project 2 -->
                 <div class="project-card">
                     <img src="/PortafolioWM/src/images/websMaker.png" alt="websMaker">
                     <div class="content">
@@ -174,27 +176,38 @@
         </div>
     </section>
        <!-- Sección de Contacto -->
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <p>Estamos aquí para ayudarte. Completa el formulario y nos pondremos en contacto contigo.</p>
+            <section id="contacto">
+                <h2>Contacto</h2>
+                <p>Estamos aquí para ayudarte. Completa el formulario y nos pondremos en contacto contigo.</p>
 
-            <div class="contact-form-container">
-                <form id="contact-form" onsubmit="return enviarFormulario(event)">
-                    <div class="form-group">
-                        <label for="nombre">Nombre</label>
-                        <input type="text" id="nombre" name="nombre" required>
+                <div class="contact-form-container">
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">Enviar</button>
+                    </form>
+
+                    <!-- Loader (inicialmente oculto) -->
+                    <div id="loader" class="loader" style="display: none;"></div>
+
+                    <!-- Popup de éxito -->
+                    <input type="checkbox" id="popup-toggle" class="popup-toggle" style="display: none;">
+                    <div id="popup" class="popup">
+                        <p>¡Mensaje enviado con éxito!</p>
+                        <label for="popup-toggle" class="btn-close">Cerrar</label>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Correo Electrónico</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="mensaje">Mensaje</label>
-                        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-                    </div>
-                    <button type="submit" class="btn-submit">Enviar</button>
-                </form>
-            </div>
+                </div>
+            </section>
 
             <!-- Ventana emergente para mostrar el mensaje de éxito -->
             <div id="popup" style="display:none;">
@@ -242,16 +255,6 @@
                 });
             }
         </script>
-
-
-        <!-- Ventana emergente de "Enviado con éxito" -->
-        <div id="popup" class="popup">
-            <div class="popup-content">
-                <p>¡Mensaje enviado con éxito!</p>
-                <button onclick="redirigirWhatsApp()">Ir a WhatsApp</button>
-            </div>
-        </div>
-    </section>
 
     <!-- Ventana emergente de "Enviado con éxito" -->
     <div id="popup" class="popup">
