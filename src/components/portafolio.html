@@ -1,298 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebsMaker</title>
     <!-- Vincula el archivo CSS -->
     <link rel="stylesheet" href="portafolio.css">
-    
+
     <!-- Estilos CSS Iniciales-->
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            color: #333;
-        }
+
         header {
-            background-color: #0077cc;
+            background: linear-gradient(to bottom, #754fce, #563399);
             color: white;
             padding: 20px 0;
             text-align: center;
         }
+
         header h1 {
             margin: 0;
         }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
+
         .intro {
+            background: linear-gradient(to bottom, #8a5df1, #563399);
+            color: #ffffff;
             text-align: center;
-            padding: 20px 0;
+            padding: 50px 20px;
+            padding-bottom: 12rem;
+            margin: 0;
         }
+
         .intro img {
             width: 150px;
             height: 150px;
             border-radius: 50%;
             margin-bottom: 20px;
         }
+
         .projects {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
         }
+
         .project-card {
             border: 1px solid #ddd;
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
+
         .project-card img {
             width: 100%;
             height: 200px;
             object-fit: cover;
         }
+
         .project-card .content {
             padding: 15px;
         }
+
         .project-card h3 {
             margin: 0 0 10px;
             font-size: 1.2em;
         }
+
         .project-card p {
             margin: 0 0 15px;
         }
+
         .project-card a {
             display: inline-block;
             text-decoration: none;
-            color: #0077cc;
+            color: #563399;
             font-weight: bold;
-        }
-        footer {
-            background-color: #0077cc;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            margin-top: 20px;
-        }
-        footer a {
-            color: white;
-            text-decoration: none;
         }
     </style>
 </head>
+
 <body>
-    <header>
+    <!-- <header>
         <h1>Mi Portafolio</h1>
         <p>Explora mis proyectos y descubre en qué he trabajado</p>
-    </header>
+    </header> -->
+
+    <!-- Introducción -->
+    <section class="intro">
+        <img src="/src/images/teeamDevops.jpg" alt="Mi Foto">
+        <!-- <img src="/PortafolioWM/src/images/teeamDevops.jpg" alt="Mi Foto"> -->
+        <h1 style="font-size: 2.5rem; margin-bottom: 20px;">Hola, somos WebsMaker</h1>
+        <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto; line-height: 1.3;">
+            Nuestro equipo está compuesto por desarrolladores apasionados, diseñadores creativos y
+            estrategas expertos
+            que trabajan juntos para ofrecer soluciones únicas a nuestros clientes. Cada miembro aporta habilidades
+            especializadas
+            y un compromiso excepcional con la calidad.
+        </p>
+    </section>
+
     <div class="container">
-        <!-- Introducción -->
-        <div class="intro">
-            <img src="/PortafolioWM/src/images/teeamDevops.jpg" alt="Mi Foto">
-            <h2>Hola, somos WebsMaker</h2>
-            <p>Desarrolladores apasionados por crear soluciones innovadoras.</p>
-        </div>
+        <!-- Skill section -->
+        <section class="skills-section">
+            <div class="skill-card">
+                <div class="icon-circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 0 0-5.78 1.128 2.25 2.25 0 0 1-2.4 2.245 4.5 4.5 0 0 0 8.4-2.245c0-.399-.078-.78-.22-1.128Zm0 0a15.998 15.998 0 0 0 3.388-1.62m-5.043-.025a15.994 15.994 0 0 1 1.622-3.395m3.42 3.42a15.995 15.995 0 0 0 4.764-4.648l3.876-5.814a1.151 1.151 0 0 0-1.597-1.597L14.146 6.32a15.996 15.996 0 0 0-4.649 4.763m3.42 3.42a6.776 6.776 0 0 0-3.42-3.42" />
+                    </svg>
+                </div>
+                <h2>Soluciones web</h2>
+                <p>Desarrollamos aplicaciones desde cero o implementaciones específicas sobre múltiples frameworks.</p>
+                <h3>Algunas de las tecnologías que manejamos son:</h3>
+                <p>React, Angular, AstroJS</p>
+                <h3>Otras herramientas:</h3>
+                <ul>
+                    <li>Streamlit</li>
+                    <li>Tailwind CSS</li>
+                    <li>Bootstrap</li>
+                    <li>Netlify</li>
+                    <li>Github</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <div class="icon-circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75 16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z" />
+                    </svg>
+                    
+                </div>
+                <h2>Desarrollo backend</h2>
+                <p>Desde la automatización de procesos de extremo a extremo hasta implementaciones personalizadas con CRMs.</p>
+                <h3>Disfrutamos implementar:</h3>
+                <p>APIs, CRUDs y trabajar con bases de datos, etc.</p>
+                <h3>Algunas de las tecnologías y herramientas que utilizamos son:</h3>
+                <ul>
+                    <li>Python</li>
+                    <li>Rust</li>
+                    <li>Kubernetes</li>
+                    <li>SQL</li>
+                    <li>No SQL</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <div class="icon-circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25Zm.75-12h9v9h-9v-9Z" />
+                    </svg>
+                </div>
+                <h2>IA</h2>
+                <p>Desarrollamos soluciones a medida basadas en inteligencia artificial y analítica avanzada.</p>
+                <h3>Soluciones como:</h3>
+                <p>Chatbots conversacionales, visión por ordenador y modelos predictivos</p>
+                <h3>Frameworks que utilizamos:</h3>
+                <ul>
+                    <li>Pytorch</li>
+                    <li>Keras 2.0 - 3.0</li>
+                    <li>Tensorflow</li>
+                </ul>
+            </div>
+        </section>
+        
+
+
         <!-- Proyectos -->
         <section>
             <h2>Proyectos</h2>
             <!-- Project 1 -->
             <div class="projects">
                 <div class="project-card">
-                    <img src="/PortafolioWM/src/images/colglasscl.png" alt="colglassllc">
+                    <img src="/src/images/colglasscl.png" alt="colglassllc">
+                    <!-- <img src="/PortafolioWM/src/images/colglasscl.png" alt="colglassllc"> -->
                     <div class="content">
-                        <h3>https://dev.colglassllc.com/</h3>
-                        <p>Pagina Web para cliente importadora de vidrios</p>
+                        <h3>Colglass</h3>
+                        <p>Pagina Web para cliente importadora de vidrios.</p>
                         <a href="https://dev.colglassllc.com/" target="_blank">Ver Proyecto</a>
                     </div>
                 </div>
+
                 <!-- Project 2 -->
                 <div class="project-card">
-                    <img src="/PortafolioWM/src/images/websMaker.png" alt="websMaker">
+                    <img src="/src/images/websMaker.png" alt="websMaker">
+                    <!-- <img src="/PortafolioWM/src/images/websMaker.png" alt="websMaker"> -->
                     <div class="content">
-                        <h3>https://admin.websmaker.co/</h3>
-                        <p>Aplicacion de creacion de cartas y catalogos bajo un subdominio</p>
+                        <h3>Websmaker</h3>
+                        <p>Aplicacion de creacion de cartas y catalogos bajo un subdominio.</p>
                         <a href="https://admin.websmaker.co/" target="_blank">Ver Proyecto</a>
                     </div>
                 </div>
+
                 <!-- Project 3 -->
                 <div class="project-card">
-                    <img src="/PortafolioWM/src/images/lanona.png" alt="La Nona Restaurante">
+                    <img src="/src/images/lanona.png" alt="La Nona Restaurante">
+                    <!-- <img src="/PortafolioWM/src/images/lanona.png" alt="La Nona Restaurante"> -->
                     <div class="content">
-                        <h3>https://lanona.websmaker.co/</h3>
-                        <p>La nona Restaurante con portal de administración</p>
+                        <h3>Lanona site</h3>
+                        <p>La nona Restaurante con portal de administración.</p>
                         <a href="https://lanona.websmaker.co/" target="_blank">Ver Proyecto</a>
                     </div>
                 </div>
+
                 <!-- Project 4 -->
                 <div class="project-card">
-                    <img src="/PortafolioWM/src/images/chatbot.jpg" alt="chatbot">
+                    <img src="/src/images/chatbot.jpg" alt="chatbot">
+                    <!-- <img src="/PortafolioWM/src/images/chatbot.jpg" alt="chatbot"> -->
                     <div class="content">
-                        <h3>https://bit.ly/PegatealPlan.</h3>
-                        <p>Chatbots semillas para la interacción con usuarios</p>
+                        <h3>Chatbots conversacionales</h3>
+                        <p>Chatbots semillas para la interacción con usuarios.</p>
                         <a href="https://bit.ly/PegatealPlan." target="_blank">Ver Proyecto</a>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card">
+                    <img slyle="width: 100px;" src="/src/images/servicesmultigo.png" alt="chatbot">
+                    <!-- <img src="/PortafolioWM/src/images/servicesmultigo.png" alt="chatbot"> -->
+                    <div class="content">
+                        <h3>Services multigo</h3>
+                        <p>Landing page para una empresa canadiense que ofrece diversos servicios de limpieza.</p>
+                        <a href="https://www.servicesmultigo.com/" target="_blank">Ver Proyecto</a>
                     </div>
                 </div>
                 <!-- Agrega más proyectos aquí -->
             </div>
         </section>
+
         <!-- Nueva Sección de Servicios -->
         <section id="servicios">
-        <h2>Servicios de Asesoramiento y Consultoría</h2>
-        <div class="servicios-container">
-            <!-- Columna 1: Consultoría -->
-            <div class="servicio-columna">
-                <h3>Consultoría</h3>
-                <ul>
-                    <li>Aterrizaje de Requerimientos</li>
-                    <li>Planificación Estratégica</li>
-                    <li>Desarrollo de Soluciones Personalizadas</li>
-                </ul>
-            </div>
-            
-            <!-- Columna 2: Data y Gobernanza -->
-            <div class="servicio-columna">
-                <h3>Data y Gobernanza</h3>
-                <ul>
-                    <li>Gobernanza de Datos</li>
-                    <li>Optimización de Bases de Datos</li>
-                    <li>Seguridad y Protección de la Información</li>
-                </ul>
-            </div>
-
-            <!-- Columna 3: Presentación de Datos para Decisiones Inteligentes -->
-            <div class="servicio-columna">
-                <h3>Presentación de Datos para Decisiones Inteligentes</h3>
-                <ul>
-                    <li>Desarrollo de Dashboards</li>
-                    <li>Visualización Interactiva de Datos</li>
-                    <li>Implementación de Sistemas de BI</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-       <!-- Sección de Contacto -->
-            <section id="contacto">
-                <h2>Contacto</h2>
-                <p>Estamos aquí para ayudarte. Completa el formulario y nos pondremos en contacto contigo.</p>
-
-                <div class="contact-form-container">
-                    <form id="contact-form" class="contact-form">
-                        <div class="form-group">
-                            <label for="nombre">Nombre</label>
-                            <input type="text" id="nombre" name="nombre" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Correo Electrónico</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="mensaje">Mensaje</label>
-                            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-                        </div>
-                        <button type="submit" class="btn-submit">Enviar</button>
-                    </form>
-
-                    <!-- Loader (inicialmente oculto) -->
-                    <div id="loader" class="loader" style="display: none;"></div>
-
-                    <!-- Popup de éxito -->
-                    <input type="checkbox" id="popup-toggle" class="popup-toggle" style="display: none;">
-                    <div id="popup" class="popup">
-                        <p>¡Mensaje enviado con éxito!</p>
-                        <label for="popup-toggle" class="btn-close">Cerrar</label>
-                    </div>
+            <h2>Servicios de Asesoramiento y Consultoría</h2>
+            <div class="servicios-container">
+                <!-- Columna 1: Consultoría -->
+                <div class="servicio-columna">
+                    <h3>Consultoría</h3>
+                    <ul>
+                        <li>Aterrizaje de Requerimientos</li>
+                        <li>Planificación Estratégica</li>
+                        <li>Desarrollo de Soluciones Personalizadas</li>
+                    </ul>
                 </div>
-            </section>
 
-            <!-- Ventana emergente para mostrar el mensaje de éxito -->
-            <div id="popup" style="display:none;">
-                <p>¡Mensaje enviado con éxito!</p>
-                <button onclick="window.location.href='https://wa.me/1234567890?text=¡Hola!'">Redirigir a WhatsApp</button>
+                <!-- Columna 2: Data y Gobernanza -->
+                <div class="servicio-columna">
+                    <h3>Data y Gobernanza</h3>
+                    <ul>
+                        <li>Gobernanza de Datos</li>
+                        <li>Optimización de Bases de Datos</li>
+                        <li>Seguridad y Protección de la Información</li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3: Presentación de Datos para Decisiones Inteligentes -->
+                <div class="servicio-columna">
+                    <h3>Presentación de Datos para Decisiones Inteligentes</h3>
+                    <ul>
+                        <li>Desarrollo de Dashboards</li>
+                        <li>Visualización Interactiva de Datos</li>
+                        <li>Implementación de Sistemas de BI</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
-        <!-- Script para manejar el formulario y mostrar la ventana emergente -->
-        <script>
-            function enviarFormulario(event) {
-                event.preventDefault(); // Prevenir que se recargue la página
-
-                // Obtener los valores del formulario
-                const nombre = document.getElementById("nombre").value;
-                const email = document.getElementById("email").value;
-                const mensaje = document.getElementById("mensaje").value;
-
-                // Preparar el objeto de datos
-                const data = {
-                    nombre: nombre,
-                    email: email,
-                    mensaje: mensaje,
-                };
-
-                // Enviar datos al backend
-                fetch('/enviar-email', {  // Asegúrate de que esta URL apunte al endpoint de tu backend
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(data),
-                })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        // Mostrar el popup de éxito
-                        document.getElementById('popup').style.display = 'block';
-                    } else {
-                        alert('Hubo un error al enviar el mensaje.');
-                    }
-                })
-                .catch((error) => {
-                    console.error('Error:', error);
-                });
-            }
-        </script>
-
-    <!-- Ventana emergente de "Enviado con éxito" -->
-    <div id="popup" class="popup">
-        <div class="popup-content">
-            <p>¡Mensaje enviado con éxito!</p>
-            <button onclick="redirigirWhatsApp()">Ir a WhatsApp</button>
-        </div>
-    </div>
-</section>
-
-<!-- Burbuja de WhatsApp -->
-<a href="https://wa.me/3153302387" target="_blank" class="whatsapp-bubble">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
-</a>
-
-
-    <!-- Aquí va el script -->
-    <script>
-        // Función para manejar el formulario
-        function enviarFormulario(event) {
-            event.preventDefault(); // Prevenir que se recargue la página
-
-            // Mostrar ventana emergente
-            document.getElementById('popup').style.display = 'block';
-        }
-
-        // Función para redirigir a WhatsApp
-        function redirigirWhatsApp() {
-            const mensaje = encodeURIComponent("¡Hola! Quiero más información.");
-            const telefono = "3153302387"; // Sustituir con tu número de teléfono
-            const url = `https://wa.me/${telefono}?text=${mensaje}`;
-            window.location.href = url;
-        }
-    </script>
+        <!-- Burbuja de WhatsApp -->
+        <a href="https://wa.me/3153302387" target="_blank" class="whatsapp-bubble">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+        </a>
 
     </div>
     <footer>
-        <p>© 2025 Mi Portafolio. Creado con ❤️ por <a href="https://websmakerco.github.io/PortafolioWM/src/components/portafolio.html">WebsMaker</a></p>
+        <p>© 2025 Mi Portafolio. Creado con ❤️ por <a
+                href="https://websmakerco.github.io/PortafolioWM/src/components/portafolio.html">WebsMaker</a></p>
     </footer>
 </body>
+
 </html>

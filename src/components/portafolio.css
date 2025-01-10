@@ -8,7 +8,7 @@ body {
 }
 
 header {
-    background-color: #333;
+    linear-gradient(to bottom, #8a5df1, #563399);
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -39,12 +39,132 @@ h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
     text-align: center;
+    color: #555555;
 }
+
+/* Skill section */
+.skills-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que las tarjetas pasen a la siguiente línea en pantallas pequeñas */
+    padding: 40px;
+    margin-top: -13rem; /* Ajusta esto según sea necesario en responsive */
+  }
+  
+  .skill-card {
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;       /* Ancho fijo para pantallas grandes */
+    text-align: center;
+    margin: 10px;       /* Añade márgenes para separar las tarjetas */
+  }
+  
+  /* Mantén tus estilos de bordes si deseas */
+  .skill-card:nth-child(1) {
+    border-radius: 15px 0px 0px 15px;
+  }
+  
+  .skill-card:nth-child(2) {
+    border-radius: 0px;
+    box-shadow: 0 4px 9px rgba(0, 0, 0, 0.1);
+  }
+  
+  .skill-card:nth-child(3) {
+    border-radius: 0px 15px 15px 0px;
+  }
+  
+  .icon-circle {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    background-color: #a1f1dc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .icon-svg {
+    width: 40px;
+    height: 40px;
+    color: #333;
+  }
+  
+  .skill-card h2 {
+    font-size: 22px;
+    color: #2d3748;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .skill-card h3 {
+    font-size: 16px;
+    color: #563399;
+    margin: 15px 0 5px;
+  }
+  
+  .skill-card ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .skill-card ul li {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #4a5568;
+  }
+  
+  /* 
+    Media query para pantallas pequeñas (móvil) 
+    Aquí se reduce el ancho de las tarjetas y se reorganizan en columnas 
+  */
+  @media (max-width: 768px) {
+    .skills-section {
+      margin-top: 0; /* Si el margen negativo causa problemas, ajusta o quita */
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .skill-card {
+      width: 90%;               /* Ocupa casi todo el ancho del contenedor */
+      max-width: 400px;         /* O un valor que prefieras */
+      margin: 20px auto;        /* Centra cada tarjeta verticalmente */
+      border-radius: 15px;      /* Simplifica si quieres un mismo radio en móvil */
+    }
+  
+    /* Opcional: unifica los bordes en móvil si no quieres que cambien por nth-child */
+    .skill-card:nth-child(1),
+    .skill-card:nth-child(2),
+    .skill-card:nth-child(3) {
+      border-radius: 15px;
+    }
+  }
+  
+  /* 
+    Si quieres un layout de 2 columnas en tablets, puedes usar otro punto de quiebre intermedio, por ejemplo:
+  */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .skills-section {
+      flex-wrap: wrap;
+    }
+  
+    .skill-card {
+      width: calc(50% - 40px); /* Dos columnas con un pequeño margen */
+    }
+  }
+  
+
+
+
 
 .servicios-container {
     display: grid;
-    grid-template-columns: 1fr; /* Una columna por defecto */
-    gap: 20px; /* Espacio entre columnas */
+    grid-template-columns: 1fr;
+    /* Una columna por defecto */
+    gap: 20px;
+    /* Espacio entre columnas */
     margin-top: 40px;
 }
 
@@ -53,33 +173,41 @@ h2 {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .servicio-columna h3 {
-    font-size: 1.5em;
-    color: #333;
+    font-size: 1.2em;
+    color: #563399;
 }
 
 .servicio-columna ul {
     list-style-type: none;
     padding-left: 0;
+    
 }
 
 .servicio-columna ul li {
     font-size: 1.1em;
     color: #666;
-    margin: 10px 0;
+    margin: 5px 0;
 }
 
+/* footer section */
 footer {
     text-align: center;
-    background-color: #333;
+    background-color: #6b46c1;
     color: #fff;
     padding: 10px;
-    position: fixed;
     bottom: 0;
     width: 100%;
 }
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
 /* Estilos para la sección de contacto */
 #contacto {
     background-color: #f9f9f9;
@@ -106,11 +234,13 @@ footer {
 .contact-form-container {
     max-width: 600px;
     margin: 0 auto;
-    padding: 45px; /* Mayor padding para un espacio adecuado */
+    padding: 45px;
+    /* Mayor padding para un espacio adecuado */
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    text-align: left; /* Alineación del texto hacia la izquierda */
+    text-align: left;
+    /* Alineación del texto hacia la izquierda */
 }
 
 /* Estilo de los campos de formulario */
@@ -125,9 +255,11 @@ footer {
     margin-bottom: 8px;
 }
 
-.form-group input, .form-group textarea {
+.form-group input,
+.form-group textarea {
     width: 100%;
-    padding: 12px; /* Más padding para dar más espacio */
+    padding: 12px;
+    /* Más padding para dar más espacio */
     font-size: 1em;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -147,7 +279,8 @@ footer {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
-    width: 100%; /* Hacer que el botón ocupe todo el ancho */
+    width: 100%;
+    /* Hacer que el botón ocupe todo el ancho */
 }
 
 /* Efecto hover para el botón de enviar */
@@ -158,7 +291,8 @@ footer {
 /* Ajustes para pantallas más pequeñas (responsive) */
 @media (max-width: 768px) {
     #contacto {
-        padding: 20px; /* Reducir padding para pantallas pequeñas */
+        padding: 20px;
+        /* Reducir padding para pantallas pequeñas */
     }
 
     .contact-form-container {
@@ -166,7 +300,8 @@ footer {
     }
 
     .btn-submit {
-        width: 100%; /* El botón ocupará el 100% del contenedor en pantallas pequeñas */
+        width: 100%;
+        /* El botón ocupará el 100% del contenedor en pantallas pequeñas */
     }
 }
 
@@ -212,41 +347,55 @@ footer {
 /* Estilos para la burbuja flotante */
 .whatsapp-bubble {
     position: fixed;
-    bottom: 20px; /* Distancia desde el fondo */
-    right: 20px; /* Distancia desde el lado derecho */
-    background-color: #25d366; /* Color de fondo de WhatsApp */
+    bottom: 20px;
+    /* Distancia desde el fondo */
+    right: 20px;
+    /* Distancia desde el lado derecho */
+    background-color: #25d366;
+    /* Color de fondo de WhatsApp */
     padding: 10px;
     border-radius: 50%;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
-    z-index: 9999; /* Asegura que la burbuja esté por encima de otros elementos */
+    z-index: 9999;
+    /* Asegura que la burbuja esté por encima de otros elementos */
 }
 
 .whatsapp-bubble:hover {
-    transform: scale(1.1); /* Efecto de ampliación al pasar el mouse */
+    transform: scale(1.1);
+    /* Efecto de ampliación al pasar el mouse */
 }
 
 .whatsapp-bubble img {
-    width: 50px; /* Ajusta el tamaño del icono */
+    width: 50px;
+    /* Ajusta el tamaño del icono */
     height: 50px;
 }
 
 /* Loader (animación circular) */
 .loader {
-    border: 6px solid #f3f3f3; /* Gris claro */
-    border-top: 6px solid #4CAF50; /* Verde */
+    border: 6px solid #f3f3f3;
+    /* Gris claro */
+    border-top: 6px solid #4CAF50;
+    /* Verde */
     border-radius: 50%;
     width: 50px;
     height: 50px;
     animation: spin 2s linear infinite;
     margin: 20px auto;
-    display: block; /* Aparecerá cuando se haga visible */
+    display: block;
+    /* Aparecerá cuando se haga visible */
 }
 
 /* Animación para el loader (girar) */
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* Popup de éxito */
@@ -257,7 +406,8 @@ footer {
     border-radius: 8px;
     text-align: center;
     margin-top: 20px;
-    display: none; /* Oculto por defecto */
+    display: none;
+    /* Oculto por defecto */
 }
 
 /* Botón de cerrar ventana */
@@ -272,6 +422,7 @@ footer {
     margin-top: 10px;
     transition: background-color 0.3s;
 }
+
 .btn-close:hover {
     background-color: #e53935;
 }
@@ -279,6 +430,7 @@ footer {
 /* Para pantallas grandes */
 @media (min-width: 768px) {
     .servicios-container {
-        grid-template-columns: 1fr 1fr 1fr; /* Tres columnas en pantallas grandes */
+        grid-template-columns: 1fr 1fr 1fr;
+        /* Tres columnas en pantallas grandes */
     }
 }
