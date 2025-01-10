@@ -81,6 +81,138 @@ footer {
     width: 100%;
 }
 
+/* Estilos para la sección de contacto */
+#contacto {
+    background-color: #f9f9f9;
+    padding: 40px;
+    text-align: center;
+}
+
+#contacto h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#contacto p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* Estilo del contenedor del formulario */
+.contact-form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de los campos de formulario */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 1.1em;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* Botón de envío */
+.btn-submit {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #45a049;
+}
+
+/* Ventana emergente */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.popup-content p {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.popup-content button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.popup-content button:hover {
+    background-color: #45a049;
+}
+
+/* Estilos para la burbuja flotante */
+.whatsapp-bubble {
+    position: fixed;
+    bottom: 20px; /* Distancia desde el fondo */
+    right: 20px; /* Distancia desde el lado derecho */
+    background-color: #25d366; /* Color de fondo de WhatsApp */
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    z-index: 9999; /* Asegura que la burbuja esté por encima de otros elementos */
+}
+
+.whatsapp-bubble:hover {
+    transform: scale(1.1); /* Efecto de ampliación al pasar el mouse */
+}
+
+.whatsapp-bubble img {
+    width: 50px; /* Ajusta el tamaño del icono */
+    height: 50px;
+}
+
+
 /* Para pantallas grandes */
 @media (min-width: 768px) {
     .servicios-container {
