@@ -1,0 +1,89 @@
+/* portafolio.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+section {
+    padding: 40px;
+    margin: 20px;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.servicios-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Una columna por defecto */
+    gap: 20px; /* Espacio entre columnas */
+    margin-top: 40px;
+}
+
+.servicio-columna {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.servicio-columna h3 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.servicio-columna ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.servicio-columna ul li {
+    font-size: 1.1em;
+    color: #666;
+    margin: 10px 0;
+}
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Para pantallas grandes */
+@media (min-width: 768px) {
+    .servicios-container {
+        grid-template-columns: 1fr 1fr 1fr; /* Tres columnas en pantallas grandes */
+    }
+}
