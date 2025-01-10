@@ -80,14 +80,16 @@ footer {
     bottom: 0;
     width: 100%;
 }
-
 /* Estilos para la sección de contacto */
 #contacto {
     background-color: #f9f9f9;
     padding: 40px;
     text-align: center;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
+/* Título y subtítulo */
 #contacto h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
@@ -104,16 +106,16 @@ footer {
 .contact-form-container {
     max-width: 600px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 45px; /* Mayor padding para un espacio adecuado */
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Alineación del texto hacia la izquierda */
 }
 
 /* Estilo de los campos de formulario */
 .form-group {
     margin-bottom: 20px;
-    text-align: left;
 }
 
 .form-group label {
@@ -125,7 +127,7 @@ footer {
 
 .form-group input, .form-group textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px; /* Más padding para dar más espacio */
     font-size: 1em;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -135,7 +137,7 @@ footer {
     resize: vertical;
 }
 
-/* Botón de envío */
+/* Estilo para el botón de enviar */
 .btn-submit {
     background-color: #4CAF50;
     color: white;
@@ -145,10 +147,27 @@ footer {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
+    width: 100%; /* Hacer que el botón ocupe todo el ancho */
 }
 
+/* Efecto hover para el botón de enviar */
 .btn-submit:hover {
     background-color: #45a049;
+}
+
+/* Ajustes para pantallas más pequeñas (responsive) */
+@media (max-width: 768px) {
+    #contacto {
+        padding: 20px; /* Reducir padding para pantallas pequeñas */
+    }
+
+    .contact-form-container {
+        padding: 20px;
+    }
+
+    .btn-submit {
+        width: 100%; /* El botón ocupará el 100% del contenedor en pantallas pequeñas */
+    }
 }
 
 /* Ventana emergente */
